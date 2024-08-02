@@ -4,8 +4,8 @@ import random
 
 #roll function
 def rolling():
-    dice = random.randint(1,6)
-    print(dice)             #for testing purposes 
+    result = random.randint(1,6)
+    return result
 
 #TUI
 x = 0
@@ -20,6 +20,10 @@ while x == 0:                                                             #catch
     else:
         print("lets go")
         x = 1
+# the actual rolling of the dice
+values = []
 for i in range(anzahl):
-    rolling()
+   value = rolling()
+   values.append(value)
+print(values)
     
