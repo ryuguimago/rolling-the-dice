@@ -1,44 +1,52 @@
 #THIS IS A DICE ROLLING PROGRAM.
 #
 import random
+#important how to save the ascii art
 dice_art = {
-    1: """
- _____
-|     |
-|  o  |
-|_____|
-""",
-    2: """
- _____
-|o    |
-|     |
-|____o|
-""",
-    3: """
- _____
-|o    |
-|  o  |
-|____o|
-""",
-    4: """
- _____
-|o   o|
-|     |
-|o___o|
-""",
-    5: """
- _____
-|o   o|
-|  o  |
-|o___o|
-""",
-    6: """
- _____
-|o   o|
-|o   o|
-|o___o|
-"""
+    1: (
+        "┌─────────┐",
+        "│         │",
+        "│    ●    │",
+        "│         │",
+        "└─────────┘",
+    ),
+    2: (
+        "┌─────────┐",
+        "│  ●      │",
+        "│         │",
+        "│      ●  │",
+        "└─────────┘",
+    ),
+    3: (
+        "┌─────────┐",
+        "│  ●      │",
+        "│    ●    │",
+        "│      ●  │",
+        "└─────────┘",
+    ),
+    4: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│         │",
+        "│  ●   ●  │",
+        "└─────────┘",
+    ),
+    5: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│    ●    │",
+        "│  ●   ●  │",
+        "└─────────┘",
+    ),
+    6: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "└─────────┘",
+    ),
 }
+
 
 #roll_dice function
 def roll_dice():
@@ -62,6 +70,8 @@ values = []
 for i in range(anzahl):
    pips = roll_dice()
    values.append(pips)     #saves the result in a list
+final =[]
 for value in values:
-    print(dice_art[value])
-    
+  final.append(dice_art[value])
+print(values)
+print(final)
